@@ -236,6 +236,93 @@ html {
   overflow: hidden;
 }
 
-h1 {
-  font-family: "Lora";
+html {
+  font-size: 62.5%;
+  /* 10px */
+}
+
+body {
+  font-size: 2rem;
+  position: relative;
+  color: #2C2C2C;
+  font-family: "Roboto", sans-serif;
+}
+
+/* STRIPPING STYLES */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+a,
+button {
+  text-transform: uppercase;
+}
+
+.header {
+  background-color: #F6A823;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.header-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+}
+
+.header-nav-link {
+  padding: 10px;
+  text-transform: uppercase;
 }

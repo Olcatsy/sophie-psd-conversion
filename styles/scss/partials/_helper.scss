@@ -1,18 +1,48 @@
 // FONTS IMPORT
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:400,500,700&display=swap');
 
+
 // FONTS STACKS
 $serif: "Lora", serif;
-$sansSerif: "Roboto", sans-serif;
-
+$sans-serif: "Roboto", sans-serif;
 
 // COLORS
 $primary: #F6A823;
 $secondary: #A82706;
 $accent: #05AFC1;
-$accentDark: #285E64;
+$accent-dark: #285E64;
 $white: #F0EFED;
 $black: #2C2C2C;
 $grey: #4F4F4F;
 
-// BREAKPOINTS
+// MEDIA BREAKPOINTS
+$mobile: 480px;
+$tablet-small: 768px;
+$tablet-large: 980px;
+
+
+// MIXINS
+
+// flexbox
+@mixin flex($flex-direction: initial, $justify-content: initial, $align-items: initial) { 
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+// Button states
+@mixin hover-state {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+
+// Media query
+@mixin max-width($breakpoint) {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
