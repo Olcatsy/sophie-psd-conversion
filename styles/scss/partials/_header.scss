@@ -1,20 +1,38 @@
 .header {
     background-color: $primary;
+    position: relative;
+
+    & .logo {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
 
     &-nav  {
-        display: flex;
-        justify-content: center;
-        align-content: center;
+        @include flex(default, center, center);
+        // display: flex;
+        // justify-content: center;
+        // align-content: center;
+        width: 100%;
+        // padding-top: 20px;
 
         & ul {
-            @include flex();
+            @include flex(default, center, center);
+            width: 100%;
+        }
+
+        & li:nth-child(2) {
+            margin-right: 10%;
+        }
+
+        & li:nth-child(3) {
+            margin-left: 10%;
         }
 
         &-link {
             padding: 10px;
-            text-transform: uppercase;
+            // text-transform: uppercase;
         }
-
 
     }
 }

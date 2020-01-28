@@ -1,0 +1,8 @@
+.hero {
+    height: 100vh;
+    background-color: $primary;
+    
+    & .flex-parent {
+        @include flex();
+    }
+}

@@ -242,10 +242,11 @@ html {
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   font-size: 2rem;
   position: relative;
+  background-color: #F0EFED;
   color: #2C2C2C;
-  font-family: "Roboto", sans-serif;
 }
 
 /* STRIPPING STYLES */
@@ -283,7 +284,6 @@ button {
   cursor: pointer;
 }
 
-h1,
 h2,
 h3,
 a,
@@ -291,22 +291,80 @@ button {
   text-transform: uppercase;
 }
 
+.logo {
+  font-family: "Lora", serif;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .header {
   background-color: #F6A823;
+  position: relative;
+}
+
+.header .logo {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
 }
 
 .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: default;
+          flex-direction: default;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 .header-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: default;
+          flex-direction: default;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.header-nav li:nth-child(2) {
+  margin-right: 10%;
+}
+
+.header-nav li:nth-child(3) {
+  margin-left: 10%;
+}
+
+.header-nav-link {
+  padding: 10px;
+}
+
+.hero {
+  height: 100vh;
+  background-color: #F6A823;
+}
+
+.hero .flex-parent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,9 +378,4 @@ button {
   -webkit-box-align: initial;
       -ms-flex-align: initial;
           align-items: initial;
-}
-
-.header-nav-link {
-  padding: 10px;
-  text-transform: uppercase;
 }

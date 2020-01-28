@@ -4,10 +4,13 @@ html {
 }
 
 body {
-    font-size: 2rem;
-    position: relative;
-    color: $black;
     font-family: $sans-serif;
+    font-size: 2rem;
+
+    position: relative;
+
+    background-color: $white;
+    color: $black;
 }
 
 /* STRIPPING STYLES */
@@ -46,8 +49,8 @@ button {
 }
 // End of BASE STYLES
 
-// SHARED STYLES
-h1,
+
+// TYPORAPHYh1,
 h2,
 h3,
 a,
@@ -55,11 +58,22 @@ button {
     text-transform: uppercase;
 }
 
+.logo {
+    font-family: $serif;
+}
+// END OF TYPORAPHY
+
+
+// SHARED STYLES
+.wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+
+
 
 
 // End of SHARED STYLES
-
-
-// TYPORAPHY
-// END OF TYPORAPHY
-
