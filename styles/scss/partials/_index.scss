@@ -1,8 +1,115 @@
+
+// HERO
 .hero {
-    height: 100vh;
+    height: 90vh;
     background-color: $primary;
+    padding: 0;
     
-    & .flex-parent {
-        @include flex();
+    .flex-parent {
+        @include flex(default, space-between, center);
+    }
+    .logo {
+        width: 60%;
+        font-size: 10rem;
+        height: 100%;
+    }
+    &-image {
+        width: 40%;
+        position: relative;
+        bottom: -50px;
+        @include box-shadow(white);
     }
 }
+// END OF HERO
+
+
+
+// ABOUT 
+// END OF ABOUT
+
+
+
+// ARTICLES
+.articles {
+    background-color: white;
+
+    .article {
+        @include flex();
+        flex-wrap: wrap;
+
+        &-img,
+        &-copy {
+            width: 50%;
+        }
+        &-img {
+            background-color: $secondary;
+
+            img{
+                @include box-shadow($secondary);
+            }
+        }
+    }
+}
+// END OF ARTICLES
+
+
+
+// BANNER
+.banner {
+    background-image: url(../assets/home-image-4.jpg);
+    background-size: cover;
+
+    @include banner-height(500, 1600);
+}
+// END OF BANNER
+
+
+
+// MAIN NAV
+.main-nav {
+    ul {
+        @include flex();
+        flex-wrap: wrap;
+    }
+    li {
+        width: 50%;
+    }
+}
+// END OF MAIN NAV
+
+
+
+// JOURNEY
+.journey {
+
+    .flex-parent {
+        @include flex();
+    }
+
+    &-image {
+        flex-basis: 35%;
+        
+        & img {
+            @include box-shadow($primary);
+        }
+    }
+
+    &-copy {
+        flex-basis: 63%;
+        margin-left: 2%;
+    }
+}
+// END OF JOURNEY
+
+
+
+// GALLERY
+.gallery {
+    background-color: white;
+
+    .flex-parent {
+        @include flex()
+    }
+    
+}
+// END OF GALLERY

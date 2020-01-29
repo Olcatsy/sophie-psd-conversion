@@ -1,6 +1,8 @@
+
 .header {
     background-color: $primary;
     position: relative;
+    height: 10vh;
 
     & .logo {
         position: absolute;
@@ -10,11 +12,8 @@
 
     &-nav  {
         @include flex(default, center, center);
-        // display: flex;
-        // justify-content: center;
-        // align-content: center;
         width: 100%;
-        // padding-top: 20px;
+        padding-top: 15px;
 
         & ul {
             @include flex(default, center, center);
@@ -31,7 +30,6 @@
 
         &-link {
             padding: 10px;
-            // text-transform: uppercase;
         }
 
     }

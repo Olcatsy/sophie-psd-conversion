@@ -275,7 +275,7 @@ a {
 
 img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
@@ -284,6 +284,7 @@ button {
   cursor: pointer;
 }
 
+h1,
 h2,
 h3,
 a,
@@ -295,15 +296,37 @@ button {
   font-family: "Lora", serif;
 }
 
+section {
+  padding: 100px 0;
+}
+
 .wrapper {
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.copy {
+  margin: 35px 0;
+  line-height: 1.6;
+}
+
+.blue-button {
+  background-color: #05AFC1;
+  padding: 10px 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.blue-button:hover, .blue-button:focus, .blue-button:active {
+  background-color: #285E64;
+  color: white;
+}
+
 .header {
   background-color: #F6A823;
   position: relative;
+  height: 10vh;
 }
 
 .header .logo {
@@ -328,6 +351,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  padding-top: 15px;
 }
 
 .header-nav ul {
@@ -359,12 +383,150 @@ button {
   padding: 10px;
 }
 
+footer {
+  background-color: #4F4F4F;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
 .hero {
-  height: 100vh;
+  height: 90vh;
   background-color: #F6A823;
+  padding: 0;
 }
 
 .hero .flex-parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: default;
+          flex-direction: default;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .logo {
+  width: 60%;
+  font-size: 10rem;
+  height: 100%;
+}
+
+.hero-image {
+  width: 40%;
+  position: relative;
+  bottom: -50px;
+  -webkit-box-shadow: 15px 15px 0 0 white;
+          box-shadow: 15px 15px 0 0 white;
+}
+
+.articles {
+  background-color: white;
+}
+
+.articles .article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.articles .article-img, .articles .article-copy {
+  width: 50%;
+}
+
+.articles .article-img {
+  background-color: #A82706;
+}
+
+.articles .article-img img {
+  -webkit-box-shadow: 15px 15px 0 0 #A82706;
+          box-shadow: 15px 15px 0 0 #A82706;
+}
+
+.banner {
+  background-image: url(../assets/home-image-4.jpg);
+  background-size: cover;
+  height: 0;
+  padding-top: 31.25%;
+}
+
+.main-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main-nav li {
+  width: 50%;
+}
+
+.journey .flex-parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+}
+
+.journey-image {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+
+.journey-image img {
+  -webkit-box-shadow: 15px 15px 0 0 #F6A823;
+          box-shadow: 15px 15px 0 0 #F6A823;
+}
+
+.journey-copy {
+  -ms-flex-preferred-size: 63%;
+      flex-basis: 63%;
+  margin-left: 2%;
+}
+
+.gallery {
+  background-color: white;
+}
+
+.gallery .flex-parent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

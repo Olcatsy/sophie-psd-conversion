@@ -46,3 +46,14 @@ $tablet-large: 980px;
       @content;
     }
   }
+
+//  Box Shadow
+@mixin box-shadow ($color) {
+    box-shadow: 15px 15px 0 0 $color;
+}
+
+// full width banner. Makes the div height fit the height of the image - found this trick on Stack Overflow
+@mixin banner-height ($img-height, $img-width) {
+    height: 0;  
+    padding-top: percentage($img-height / $img-width);
+}
