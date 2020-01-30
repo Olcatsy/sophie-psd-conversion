@@ -307,7 +307,7 @@ section {
 }
 
 .copy {
-  margin: 35px 0;
+  margin: 30px 0;
   line-height: 1.6;
 }
 
@@ -461,6 +461,10 @@ footer {
           box-shadow: 15px 15px 0 0 #A82706;
 }
 
+.articles .article-copy {
+  padding: 80px;
+}
+
 .banner {
   background-image: url(../assets/home-image-4.jpg);
   background-size: cover;
@@ -486,8 +490,30 @@ footer {
       flex-wrap: wrap;
 }
 
-.main-nav li {
-  width: 50%;
+.main-nav-item {
+  width: calc(50% - 110px);
+  position: relative;
+  margin-left: 110px;
+  margin-top: 60px;
+}
+
+.main-nav-icon {
+  font-size: 3rem;
+  background-color: #F6A823;
+  border-radius: 50%;
+  padding: 15px;
+  position: absolute;
+  left: -80px;
+  top: -5px;
+}
+
+.main-nav-link {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.main-nav-link:hover, .main-nav-link:focus, .main-nav-link:active {
+  color: #A82706;
 }
 
 .journey .flex-parent {
@@ -507,19 +533,22 @@ footer {
 }
 
 .journey-image {
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
+  min-width: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .journey-image img {
   -webkit-box-shadow: 15px 15px 0 0 #F6A823;
           box-shadow: 15px 15px 0 0 #F6A823;
+  min-height: 304px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .journey-copy {
-  -ms-flex-preferred-size: 63%;
-      flex-basis: 63%;
-  margin-left: 2%;
+  min-width: calc(60% - 50px);
+  margin-left: 50px;
 }
 
 .gallery {
@@ -540,4 +569,13 @@ footer {
   -webkit-box-align: initial;
       -ms-flex-align: initial;
           align-items: initial;
+}
+
+.gallery img {
+  margin-right: 2%;
+  width: calc((100% -4%) / 3);
+}
+
+.gallery img:last-child {
+  margin-right: 0;
 }

@@ -36,7 +36,7 @@
     .article {
         @include flex();
         flex-wrap: wrap;
-
+        
         &-img,
         &-copy {
             width: 50%;
@@ -47,6 +47,9 @@
             img{
                 @include box-shadow($secondary);
             }
+        }
+        &-copy {
+            padding: 80px;
         }
     }
 }
@@ -71,8 +74,28 @@
         @include flex();
         flex-wrap: wrap;
     }
-    li {
-        width: 50%;
+    &-item {
+        width: calc(50% - 110px);   
+        position: relative;
+        margin-left: 110px;
+        margin-top: 60px;
+    }
+    &-icon {
+        font-size: 3rem;
+        background-color: $primary;
+        border-radius: 50%;
+        padding: 15px;
+        position: absolute;
+        left: -80px;
+        top: -5px;
+    }
+    &-link {
+        font-size: 3rem;
+        font-weight: 700;
+
+        @include hover-state {
+            color: $secondary;
+        }
     }
 }
 // END OF MAIN NAV
@@ -87,16 +110,19 @@
     }
 
     &-image {
-        flex-basis: 35%;
+        min-width: 40%;
+        object-fit: cover;  
         
-        & img {
+        img {
             @include box-shadow($primary);
+            min-height: 304px;
+            object-fit: cover; 
         }
     }
 
     &-copy {
-        flex-basis: 63%;
-        margin-left: 2%;
+        min-width: calc(60% - 50px);
+        margin-left: 50px;
     }
 }
 // END OF JOURNEY
@@ -109,6 +135,15 @@
 
     .flex-parent {
         @include flex()
+    }
+
+    img {
+        margin-right: 2%;
+        width: calc((100% -4%) / 3);
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
     
 }
