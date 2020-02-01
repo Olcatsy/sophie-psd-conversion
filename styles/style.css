@@ -336,7 +336,7 @@ section {
           transform: translate(-50%);
 }
 
-.header-nav {
+.header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,7 +354,7 @@ section {
   padding-top: 15px;
 }
 
-.header-nav ul {
+.header .nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,15 +371,15 @@ section {
   width: 100%;
 }
 
-.header-nav li:nth-child(2) {
+.header .nav li:nth-child(2) {
   margin-right: 10%;
 }
 
-.header-nav li:nth-child(3) {
+.header .nav li:nth-child(3) {
   margin-left: 10%;
 }
 
-.header-nav-link {
+.header .nav-link {
   padding: 10px;
 }
 
@@ -390,13 +390,13 @@ footer {
   padding: 15px 0;
 }
 
-.hero {
+.index .hero {
   height: 90vh;
   background-color: #F6A823;
   padding: 0;
 }
 
-.hero .flex-parent {
+.index .hero .flex-parent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,23 +412,23 @@ footer {
           align-items: center;
 }
 
-.hero-title {
+.index .hero-title {
   position: relative;
 }
 
-.hero .circle-text {
+.index .hero .circle-text {
   position: absolute;
   bottom: 55px;
   left: -75px;
 }
 
-.hero .logo {
+.index .hero .logo {
   width: 60%;
   font-size: 10rem;
   height: 100%;
 }
 
-.hero-image {
+.index .hero-image {
   width: 40%;
   position: relative;
   bottom: -50px;
@@ -436,58 +436,58 @@ footer {
           box-shadow: 25px 25px 0 0 white;
 }
 
-.articles {
+.index .articles {
   background-color: white;
   padding: 0;
 }
 
-.article {
+.index .article {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (50%)[2];
       grid-template-columns: repeat(2, 50%);
 }
 
-.article-img {
+.index .article-img {
   position: relative;
 }
 
-.article-img.first {
+.index .article-img.first {
   top: -50px;
 }
 
-.article-img.first img {
+.index .article-img.first img {
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-box-shadow: 25px 25px 0 0 #A82706, -500px 25px 0 0 #A82706;
           box-shadow: 25px 25px 0 0 #A82706, -500px 25px 0 0 #A82706;
 }
 
-.article-img.second {
+.index .article-img.second {
   bottom: -50px;
 }
 
-.article-img.second img {
+.index .article-img.second img {
   -webkit-box-shadow: 25px 25px 0 0 #F6A823, 500px 25px 0 0 #F6A823;
           box-shadow: 25px 25px 0 0 #F6A823, 500px 25px 0 0 #F6A823;
 }
 
-.article-copy {
+.index .article-copy {
   padding: 80px;
 }
 
-.article-copy.second {
+.index .article-copy.second {
   text-align: end;
 }
 
-.banner {
+.index .banner {
   background-image: url(../assets/home-image-4.jpg);
   background-size: cover;
   height: 0;
   padding-top: 31.25%;
 }
 
-.main-nav ul {
+.index .main-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -505,14 +505,14 @@ footer {
       flex-wrap: wrap;
 }
 
-.main-nav-item {
+.index .main-nav-item {
   width: calc(50% - 110px);
   position: relative;
   margin-left: 110px;
   margin-top: 60px;
 }
 
-.main-nav-icon {
+.index .main-nav-icon {
   font-size: 3rem;
   background-color: #F6A823;
   border-radius: 50%;
@@ -522,16 +522,16 @@ footer {
   top: -5px;
 }
 
-.main-nav-link {
+.index .main-nav-link {
   font-size: 3rem;
   font-weight: 700;
 }
 
-.main-nav-link:hover, .main-nav-link:focus, .main-nav-link:active {
+.index .main-nav-link:hover, .index .main-nav-link:focus, .index .main-nav-link:active {
   color: #A82706;
 }
 
-.journey .flex-parent {
+.index .journey .flex-parent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -547,13 +547,13 @@ footer {
           align-items: initial;
 }
 
-.journey-image {
+.index .journey-image {
   min-width: 40%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.journey-image img {
+.index .journey-image img {
   -webkit-box-shadow: 25px 25px 0 0 #F6A823;
           box-shadow: 25px 25px 0 0 #F6A823;
   min-height: 304px;
@@ -561,16 +561,16 @@ footer {
      object-fit: cover;
 }
 
-.journey-copy {
+.index .journey-copy {
   min-width: calc(60% - 50px);
   margin-left: 50px;
 }
 
-.gallery {
+.index .gallery {
   background-color: white;
 }
 
-.gallery .flex-parent {
+.index .gallery .flex-parent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -586,17 +586,17 @@ footer {
           align-items: initial;
 }
 
-.gallery img {
+.index .gallery img {
   margin-right: 2%;
   width: calc((100% -4%) / 3);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-.gallery img:last-child {
+.index .gallery img:last-child {
   margin-right: 0;
 }
 
-.gallery img:hover {
+.index .gallery img:hover {
   scale: 1.2;
 }

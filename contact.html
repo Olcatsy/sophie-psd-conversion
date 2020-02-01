@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src='https://kit.fontawesome.com/cb6fbd44a4.js' crossorigin='anonymous'></script>
     <link rel="shortcut icon" href="assets/favicon.png" type="image/png-icon">
     <title>Sophie - Contact me</title>
+
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+
+<body class="contact">
+
     <!-- HEADER -->
     <header class="header">
-    
+
         <!-- Logo -->
-        <div class="header-logo">
+        <div class="logo">
             <h1>Sophie</h1>
         </div>
-    
+
         <!-- Header Nav -->
-        <nav class="header-nav">
+        <nav class="nav">
             <ul>
                 <li>
-                    <a class="header-nav-link" href="./index.html">home</a>
+                    <a class="nav-link" href="./index.html">home</a>
                 </li>
                 <li>
-                    <a class="header-nav-link" href="#about">about</a>
+                    <a class="nav-link" href="#about">about</a>
                 </li>
                 <li>
-                    <a class="header-nav-link" href="./blog.html">blog</a>
+                    <a class="nav-link" href="./blog.html">blog</a>
                 </li>
                 <li>
-                    <a class="header-nav-link" href="./contact.html">contact</a>
+                    <a class="nav-link" href="./contact.html">contact</a>
                 </li>
             </ul>
         </nav>
         <!-- End of Header Nav -->
-    
+
     </header>
     <!-- END OF HEADER -->
 
@@ -43,6 +49,76 @@
 
     <!-- MAIN -->
     <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="wrapper">
+
+                <h2>Get in touch</h2>
+
+            </div>
+        </section>
+        <!-- End of HERO -->
+
+
+        <div class="wrapper">
+
+            <!-- CONTACT FORM -->
+            <section class="form">
+                <form action="POST">
+
+                    <!-- Name -->
+                    <input id="name" type="text" name="text" placeholder="Name" required>
+                    <label for="name" class="sr-only">Your Name</label>
+
+                    <!-- Email -->
+                    <input id="email" type="email" name="email" placeholder="Email address" required>
+                    <label for="email" class="sr-only">Email address</label>
+
+                    <!-- Message -->
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    <label for="message" class="sr-only">Message</label>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="blue-button">Submit</button>
+
+                </form>
+
+            </section>
+            <!-- END OF CONTACT FORM -->
+
+            <!-- ASIDE -->
+            <aside class="aside">
+
+                <!-- Social links -->
+                <div class="social flex-parent">
+
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f" aria-label="facebook" title="facebook"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter" aria-label="twitter" title="twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin-in" aria-label="linked in" title="linked in"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram" aria-label="instagram" title="instagram"></i>
+                    </a>
+                </div>
+
+                <address>
+                    
+                    <p class="email">info@email.com</p>
+                    <p>123-456-7890</p>
+                    <p>123 Queen St. W, Unit 10</p>
+                    <p>Toronto, ON</p>
+                    <p>M5V2D5</p>
+
+                </address>
+            </aside>
+            <!-- END OF ASIDE -->
+        </div>
 
     </main>
     <!-- END OF MAIN -->
@@ -58,4 +134,5 @@
     <!-- END OF FOOTER -->
 
 </body>
+
 </html>

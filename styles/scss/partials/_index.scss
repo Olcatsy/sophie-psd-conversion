@@ -1,187 +1,188 @@
+.index {
 
-// HERO
-.hero {
-    height: 90vh;
-    background-color: $primary;
-    padding: 0;
-    
-    .flex-parent {
-        @include flex(default, space-between, center);
-    }
-    &-title {
-        position: relative;
-    }
-    .circle-text {
-        position: absolute;
-        bottom: 55px;
-        left: -75px;
-    }
-    .logo {
-        width: 60%;
-        font-size: 10rem;
-        height: 100%;
-    }
-    &-image {
-        width: 40%;
-        position: relative;
-        bottom: -50px;
-        @include box-shadow(white);
-    }
-}
-// END OF HERO
-
-
-
-// ABOUT 
-// END OF ABOUT
-
-
-
-// ARTICLES
-.articles {
-    background-color: white;
-    padding: 0;
-}
-// general article styles
-.article {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-
-    
-    &-img {
-        position: relative;
-        
-        // first article image
-        &.first {
-            
-            top: -50px;
-            
-            img {
-                object-fit: cover;
-                box-shadow: 
-                    $box-shadow-size $box-shadow-size 0 0 $secondary, 
-                    -500px $box-shadow-size 0 0 $secondary;
-            }
-        }
-        // second article image
-        &.second {
-            
-            bottom: -50px;
-
-            img {
-                box-shadow: 
-                $box-shadow-size $box-shadow-size 0 0 $primary,
-                500px $box-shadow-size 0 0 $primary;
-            }
-        }
-    }
-
-    &-copy {
-        padding: 80px;
-
-        &.second {
-            text-align: end;
-        }
-    }
-}
-// END OF ARTICLES
-
-
-
-// BANNER
-.banner {
-    background-image: url(../assets/home-image-4.jpg);
-    background-size: cover;
-
-    @include banner-height(500, 1600);
-}
-// END OF BANNER
-
-
-
-// MAIN NAV
-.main-nav {
-    ul {
-        @include flex();
-        flex-wrap: wrap;
-    }
-    &-item {
-        width: calc(50% - 110px);   
-        position: relative;
-        margin-left: 110px;
-        margin-top: 60px;
-    }
-    &-icon {
-        font-size: 3rem;
+    // HERO
+    .hero {
+        height: 90vh;
         background-color: $primary;
-        border-radius: 50%;
-        padding: 15px;
-        position: absolute;
-        left: -80px;
-        top: -5px;
-    }
-    &-link {
-        font-size: 3rem;
-        font-weight: 700;
-
-        @include hover-state {
-            color: $secondary;
-        }
-    }
-}
-// END OF MAIN NAV
-
-
-
-// JOURNEY
-.journey {
-
-    .flex-parent {
-        @include flex();
-    }
-
-    &-image {
-        min-width: 40%;
-        object-fit: cover;  
+        padding: 0;
         
+        .flex-parent {
+            @include flex(default, space-between, center);
+        }
+        &-title {
+            position: relative;
+        }
+        .circle-text {
+            position: absolute;
+            bottom: 55px;
+            left: -75px;
+        }
+        .logo {
+            width: 60%;
+            font-size: 10rem;
+            height: 100%;
+        }
+        &-image {
+            width: 40%;
+            position: relative;
+            bottom: -50px;
+            @include box-shadow(white);
+        }
+    }
+    // END OF HERO
+
+
+
+    // ABOUT 
+    // END OF ABOUT
+
+
+
+    // ARTICLES
+    .articles {
+        background-color: white;
+        padding: 0;
+    }
+    // general article styles
+    .article {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+
+        
+        &-img {
+            position: relative;
+            
+            // first article image
+            &.first {
+                
+                top: -50px;
+                
+                img {
+                    object-fit: cover;
+                    box-shadow: 
+                        $box-shadow-size $box-shadow-size 0 0 $secondary, 
+                        -500px $box-shadow-size 0 0 $secondary;
+                }
+            }
+            // second article image
+            &.second {
+                
+                bottom: -50px;
+
+                img {
+                    box-shadow: 
+                    $box-shadow-size $box-shadow-size 0 0 $primary,
+                    500px $box-shadow-size 0 0 $primary;
+                }
+            }
+        }
+
+        &-copy {
+            padding: 80px;
+
+            &.second {
+                text-align: end;
+            }
+        }
+    }
+    // END OF ARTICLES
+
+
+
+    // BANNER
+    .banner {
+        background-image: url(../assets/home-image-4.jpg);
+        background-size: cover;
+
+        @include banner-height(500, 1600);
+    }
+    // END OF BANNER
+
+
+
+    // MAIN NAV
+    .main-nav {
+        ul {
+            @include flex();
+            flex-wrap: wrap;
+        }
+        &-item {
+            width: calc(50% - 110px);   
+            position: relative;
+            margin-left: 110px;
+            margin-top: 60px;
+        }
+        &-icon {
+            font-size: 3rem;
+            background-color: $primary;
+            border-radius: 50%;
+            padding: 15px;
+            position: absolute;
+            left: -80px;
+            top: -5px;
+        }
+        &-link {
+            font-size: 3rem;
+            font-weight: 700;
+
+            @include hover-state {
+                color: $secondary;
+            }
+        }
+    }
+    // END OF MAIN NAV
+
+
+
+    // JOURNEY
+    .journey {
+
+        .flex-parent {
+            @include flex();
+        }
+
+        &-image {
+            min-width: 40%;
+            object-fit: cover;  
+            
+            img {
+                @include box-shadow($primary);
+                min-height: 304px;
+                object-fit: cover; 
+            }
+        }
+
+        &-copy {
+            min-width: calc(60% - 50px);
+            margin-left: 50px;
+        }
+    }
+    // END OF JOURNEY
+
+
+
+    // GALLERY
+    .gallery {
+        background-color: white;
+
+        .flex-parent {
+            @include flex()
+        }
+
         img {
-            @include box-shadow($primary);
-            min-height: 304px;
-            object-fit: cover; 
-        }
-    }
+            margin-right: 2%;
+            width: calc((100% -4%) / 3);
+            transition: $transition;
 
-    &-copy {
-        min-width: calc(60% - 50px);
-        margin-left: 50px;
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                scale: 1.2;
+            }
+        }
+        
     }
+    // END OF GALLERY
 }
-// END OF JOURNEY
-
-
-
-// GALLERY
-.gallery {
-    background-color: white;
-
-    .flex-parent {
-        @include flex()
-    }
-
-    img {
-        margin-right: 2%;
-        width: calc((100% -4%) / 3);
-        transition: $transition;
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &:hover {
-            scale: 1.2;
-        }
-    }
-    
-}
-// END OF GALLERY
-
