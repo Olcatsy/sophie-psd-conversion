@@ -32,24 +32,47 @@
 // ARTICLES
 .articles {
     background-color: white;
+    padding: 0;
+}
+// general article styles
+.article {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
 
-    .article {
-        @include flex();
-        flex-wrap: wrap;
+    
+    &-img {
+        position: relative;
         
-        &-img,
-        &-copy {
-            width: 50%;
-        }
-        &-img {
-            background-color: $secondary;
-
-            img{
-                @include box-shadow($secondary);
+        // first article image
+        &.first {
+            
+            top: -50px;
+            
+            img {
+                object-fit: cover;
+                box-shadow: 
+                    $box-shadow-size $box-shadow-size 0 0 $secondary, 
+                    -500px $box-shadow-size 0 0 $secondary;
             }
         }
-        &-copy {
-            padding: 80px;
+        // second article image
+        &.second {
+            
+            bottom: -50px;
+
+            img {
+                box-shadow: 
+                $box-shadow-size $box-shadow-size 0 0 $primary,
+                500px $box-shadow-size 0 0 $primary;
+            }
+        }
+    }
+
+    &-copy {
+        padding: 80px;
+
+        &.second {
+            text-align: end;
         }
     }
 }
@@ -140,11 +163,17 @@
     img {
         margin-right: 2%;
         width: calc((100% -4%) / 3);
+        transition: $transition;
 
         &:last-child {
             margin-right: 0;
+        }
+
+        &:hover {
+            scale: 1.2;
         }
     }
     
 }
 // END OF GALLERY
+

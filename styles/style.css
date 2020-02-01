@@ -302,7 +302,7 @@ section {
 
 .wrapper {
   width: 80%;
-  max-width: 1200px;
+  max-width: 2000px;
   margin: 0 auto;
 }
 
@@ -422,47 +422,52 @@ footer {
   width: 40%;
   position: relative;
   bottom: -50px;
-  -webkit-box-shadow: 15px 15px 0 0 white;
-          box-shadow: 15px 15px 0 0 white;
+  -webkit-box-shadow: 25px 25px 0 0 white;
+          box-shadow: 25px 25px 0 0 white;
 }
 
 .articles {
   background-color: white;
+  padding: 0;
 }
 
-.articles .article {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: initial;
-  -webkit-box-direction: initial;
-      -ms-flex-direction: initial;
-          flex-direction: initial;
-  -webkit-box-pack: initial;
-      -ms-flex-pack: initial;
-          justify-content: initial;
-  -webkit-box-align: initial;
-      -ms-flex-align: initial;
-          align-items: initial;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.article {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
 }
 
-.articles .article-img, .articles .article-copy {
-  width: 50%;
+.article-img {
+  position: relative;
 }
 
-.articles .article-img {
-  background-color: #A82706;
+.article-img.first {
+  top: -50px;
 }
 
-.articles .article-img img {
-  -webkit-box-shadow: 15px 15px 0 0 #A82706;
-          box-shadow: 15px 15px 0 0 #A82706;
+.article-img.first img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 25px 25px 0 0 #A82706, -500px 25px 0 0 #A82706;
+          box-shadow: 25px 25px 0 0 #A82706, -500px 25px 0 0 #A82706;
 }
 
-.articles .article-copy {
+.article-img.second {
+  bottom: -50px;
+}
+
+.article-img.second img {
+  -webkit-box-shadow: 25px 25px 0 0 #F6A823, 500px 25px 0 0 #F6A823;
+          box-shadow: 25px 25px 0 0 #F6A823, 500px 25px 0 0 #F6A823;
+}
+
+.article-copy {
   padding: 80px;
+}
+
+.article-copy.second {
+  text-align: end;
 }
 
 .banner {
@@ -539,8 +544,8 @@ footer {
 }
 
 .journey-image img {
-  -webkit-box-shadow: 15px 15px 0 0 #F6A823;
-          box-shadow: 15px 15px 0 0 #F6A823;
+  -webkit-box-shadow: 25px 25px 0 0 #F6A823;
+          box-shadow: 25px 25px 0 0 #F6A823;
   min-height: 304px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -574,8 +579,14 @@ footer {
 .gallery img {
   margin-right: 2%;
   width: calc((100% -4%) / 3);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .gallery img:last-child {
   margin-right: 0;
+}
+
+.gallery img:hover {
+  scale: 1.2;
 }
