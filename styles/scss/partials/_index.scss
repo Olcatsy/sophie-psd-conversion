@@ -8,6 +8,14 @@
     .flex-parent {
         @include flex(default, space-between, center);
     }
+    &-title {
+        position: relative;
+    }
+    .circle-text {
+        position: absolute;
+        bottom: 55px;
+        left: -75px;
+    }
     .logo {
         width: 60%;
         font-size: 10rem;

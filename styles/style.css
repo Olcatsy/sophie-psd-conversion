@@ -412,6 +412,16 @@ footer {
           align-items: center;
 }
 
+.hero-title {
+  position: relative;
+}
+
+.hero .circle-text {
+  position: absolute;
+  bottom: 55px;
+  left: -75px;
+}
+
 .hero .logo {
   width: 60%;
   font-size: 10rem;
