@@ -284,6 +284,10 @@ button {
   cursor: pointer;
 }
 
+address {
+  font-style: normal;
+}
+
 h1,
 h2,
 h3,
@@ -292,8 +296,16 @@ button {
   text-transform: uppercase;
 }
 
+.hero h2 {
+  font-size: 8rem;
+  position: relative;
+  bottom: -50px;
+}
+
 .logo {
   font-family: "Lora", serif;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 section {
@@ -331,9 +343,10 @@ section {
 
 .header .logo {
   position: absolute;
-  left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
+  left: 50%;
+  top: 1rem;
 }
 
 .header .nav {
@@ -376,27 +389,34 @@ section {
 }
 
 .header .nav li:nth-child(3) {
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .header .nav-link {
-  padding: 10px;
+  padding: 10px 30px;
+  font-weight: 700;
+}
+
+.header .nav-link:hover, .header .nav-link:focus, .header .nav-link:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 footer {
+  font-size: 1.5rem;
   background-color: #4F4F4F;
   color: white;
   text-align: center;
   padding: 15px 0;
 }
 
-.index .hero {
-  height: 90vh;
+.index-hero {
+  height: 80vh;
   background-color: #F6A823;
   padding: 0;
 }
 
-.index .hero .flex-parent {
+.index-hero .flex-parent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -404,34 +424,32 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: default;
           flex-direction: default;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.index .hero-title {
-  position: relative;
-}
-
-.index .hero .circle-text {
+.index-hero .circle-text {
   position: absolute;
   bottom: 55px;
   left: -75px;
 }
 
-.index .hero .logo {
+.index-hero h2 {
   width: 60%;
-  font-size: 10rem;
-  height: 100%;
+  font-size: 12rem;
 }
 
-.index .hero-image {
-  width: 40%;
+.index-hero-title {
   position: relative;
-  bottom: -50px;
+}
+
+.index-hero-image {
+  width: 35%;
+  position: relative;
+  bottom: -40px;
   -webkit-box-shadow: 25px 25px 0 0 white;
           box-shadow: 25px 25px 0 0 white;
 }
@@ -481,7 +499,9 @@ footer {
 }
 
 .index .banner {
-  background-image: url(../assets/home-image-4.jpg);
+  background-image: url("../assets/home-image-4.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
   background-size: cover;
   height: 0;
   padding-top: 31.25%;
@@ -513,13 +533,13 @@ footer {
 }
 
 .index .main-nav-icon {
-  font-size: 3rem;
   background-color: #F6A823;
   border-radius: 50%;
-  padding: 15px;
+  font-size: 3rem;
   position: absolute;
-  left: -80px;
+  left: -90px;
   top: -5px;
+  padding: 15px;
 }
 
 .index .main-nav-link {
@@ -528,7 +548,7 @@ footer {
 }
 
 .index .main-nav-link:hover, .index .main-nav-link:focus, .index .main-nav-link:active {
-  color: #A82706;
+  text-decoration: underline;
 }
 
 .index .journey .flex-parent {
@@ -599,4 +619,54 @@ footer {
 
 .index .gallery img:hover {
   scale: 1.2;
+}
+
+.blog .hero {
+  background-image: url("../assets/blog-image-1.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 0;
+  padding-top: 25%;
+}
+
+.contact .hero {
+  height: 0;
+  padding-top: 25%;
+  background-image: url("../assets/contact-image-1.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.contact .grid-parent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
+
+.contact .aside {
+  background-color: white;
+  font-style: normal;
+}
+
+.contact .aside .social {
+  color: #F6A823;
+}
+
+.contact .aside .social.flex-parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
 }

@@ -1,0 +1,43 @@
+.contact {
+
+    // HERO
+    .hero {
+        @include banner-height(400, 1600);
+        @include banner-styles("../assets/contact-image-1.jpg")
+    }
+    // END OF HERO
+
+    // MAIN CONTENT
+    .grid-parent {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    // ASIDE
+    .aside {
+        background-color: white;
+        font-style: normal;
+
+        .social {
+            color: $primary;
+
+            &.flex-parent {
+                @include flex();
+            }
+        }
+    }
+
+    // END OF ASIDE
+
+
+
+
+
+
+
+
+
+
+
+
+}

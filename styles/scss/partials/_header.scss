@@ -6,8 +6,9 @@
 
     .logo {
         position: absolute;
-        left: 50%;
         transform: translate(-50%);
+        left: 50%;
+        top: 1rem;
     }
 
     .nav  {
@@ -25,12 +26,18 @@
         }
 
         & li:nth-child(3) {
-            margin-left: 10%;
+            margin-left: 5%;
         }
 
         &-link {
-            padding: 10px;
+            padding: 10px 30px;
+            font-weight: 700;
+
+            @include hover-state {
+                transform: scale(1.1);
+            }
         }
+            
 
     }
 }

@@ -1,0 +1,16 @@
+.blog {
+
+    // HERO
+    .hero {
+        @include banner-styles("../assets/blog-image-1.jpg");
+        @include banner-height(400, 1600);
+    }
+    // END OF HERO
+
+    // BLOG - MAIN CONTENT
+    
+
+
+
+
+}

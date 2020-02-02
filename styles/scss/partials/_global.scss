@@ -40,6 +40,9 @@ button {
     border: none;
     cursor: pointer;
 }
+address {
+    font-style: normal;
+}
 // End of BASE STYLES
 
 
@@ -51,8 +54,16 @@ a,
 button {
     text-transform: uppercase;
 }
+// titles for Contact and Blog pages
+.hero h2 {
+    font-size: 8rem;
+    position: relative;
+    bottom: -50px;
+}
 .logo {
     font-family: $serif;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 // END OF TYPORAPHY
 
@@ -81,5 +92,6 @@ section {
         color: white;
     }
 }
+
 
 // End of SHARED STYLES

@@ -1,31 +1,32 @@
 .index {
 
     // HERO
-    .hero {
-        height: 90vh;
+    &-hero {
+        height: 80vh;
         background-color: $primary;
         padding: 0;
         
         .flex-parent {
-            @include flex(default, space-between, center);
+            @include flex(default, space-around, center);
         }
-        &-title {
-            position: relative;
-        }
+        
         .circle-text {
             position: absolute;
             bottom: 55px;
             left: -75px;
         }
-        .logo {
+        h2 {
             width: 60%;
-            font-size: 10rem;
-            height: 100%;
+            font-size: 12rem;
+            
+        }
+        &-title {
+            position: relative;
         }
         &-image {
-            width: 40%;
+            width: 35%;
             position: relative;
-            bottom: -50px;
+            bottom: -40px;
             @include box-shadow(white);
         }
     }
@@ -91,9 +92,7 @@
 
     // BANNER
     .banner {
-        background-image: url(../assets/home-image-4.jpg);
-        background-size: cover;
-
+        @include banner-styles("../assets/home-image-4.jpg");
         @include banner-height(500, 1600);
     }
     // END OF BANNER
@@ -113,20 +112,20 @@
             margin-top: 60px;
         }
         &-icon {
-            font-size: 3rem;
             background-color: $primary;
             border-radius: 50%;
-            padding: 15px;
+            font-size: 3rem;
             position: absolute;
-            left: -80px;
+            left: -90px;
             top: -5px;
+            padding: 15px;
         }
         &-link {
             font-size: 3rem;
             font-weight: 700;
 
             @include hover-state {
-                color: $secondary;
+                text-decoration: underline;
             }
         }
     }

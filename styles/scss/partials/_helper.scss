@@ -61,3 +61,11 @@ $box-shadow-size: 25px;
     height: 0;  
     padding-top: percentage($img-height / $img-width);
 }
+
+// Styles for background and title of the banners
+@mixin banner-styles ($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
