@@ -38,8 +38,7 @@ $box-shadow-size: 25px;
 // Button states
 @mixin hover-state {
     &:hover,
-    &:focus,
-    &:active {
+    &:focus {
         @content;
     }
 }
@@ -68,4 +67,12 @@ $box-shadow-size: 25px;
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
+}
+
+// styles for the main content on blog and content page
+@mixin main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 100px 0;
+    grid-gap: 40px;
 }

@@ -9,6 +9,11 @@
         transform: translate(-50%);
         left: 50%;
         top: 1rem;
+
+        font-family: $serif;
+        font-size: 4rem;
+        font-weight: 600;
+        letter-spacing: 1px;
     }
 
     .nav  {
@@ -21,12 +26,13 @@
             width: 100%;
         }
 
+        // Creates space for the logo in the middle of the nav
         & li:nth-child(2) {
             margin-right: 10%;
         }
 
         & li:nth-child(3) {
-            margin-left: 5%;
+            margin-left: 10%;
         }
 
         &-link {

@@ -20,7 +20,8 @@
 
         <!-- Logo -->
         <div class="logo">
-            <h1>Sophie</h1>
+            <!-- clicking on the logo takes you to the main page -->
+            <a href="index.html">Sophie</a>
         </div>
 
         <!-- Header Nav -->
@@ -54,14 +55,14 @@
         <section class="hero">
             <div class="wrapper">
 
-                <h2>Get in touch</h2>
+                <h1>Get in touch</h1>
 
             </div>
         </section>
         <!-- End of HERO -->
 
 
-        <div class="wrapper grid-parent">
+        <div class="main-content wrapper clearfix">
 
             <!-- ASIDE -->
             <aside class="aside">
@@ -108,23 +109,24 @@
 
 
             <!-- CONTACT FORM -->
-            <section class="form">
-                <form action="POST">
+            <section class="form-section">
+
+                <form action="POST" class="form">
 
                     <!-- Name -->
-                    <input id="name" type="text" name="text" placeholder="Name" required>
+                    <input id="name" class="name" type="text" name="name" placeholder="Name" required>
                     <label for="name" class="sr-only">Your Name</label>
 
                     <!-- Email -->
-                    <input id="email" type="email" name="email" placeholder="Email address" required>
+                    <input id="email" class="email" type="email" name="email" placeholder="Email address" required>
                     <label for="email" class="sr-only">Email address</label>
 
                     <!-- Message -->
-                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    <textarea id="message" class="message" name="message" placeholder="Message" required></textarea>
                     <label for="message" class="sr-only">Message</label>
 
                     <!-- Submit button -->
-                    <button type="submit" class="blue-button">Submit</button>
+                    <button type="submit" class="blue-button submit">Submit</button>
 
                 </form>
 

@@ -7,16 +7,20 @@
     }
     // END OF HERO
 
+
     // MAIN CONTENT
-    .grid-parent {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
+    .main-content {
+        @include main-content();
     }
+
 
     // ASIDE
     .aside {
+        align-self: start;
         background-color: white;
         font-style: normal;
+        line-height: 1.5;
+        padding: 40px;
 
         .social {
             color: $primary;
@@ -24,18 +28,27 @@
             &.flex-parent {
                 @include flex();
             }
+
+            a {
+                font-size: 3rem;
+                padding-right: 3rem;
+                padding-bottom: 2rem;
+            }
         }
+        .email {
+                margin-bottom: 20px;
+                font-weight: 600;
+            }
     }
 
     // END OF ASIDE
 
 
-
-
-
-
-
-
+    // CONTACT FORM
+    .form-section {
+        padding: 0;
+    }
+    // END OF CONTACT FORM
 
 
 

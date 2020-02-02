@@ -15,10 +15,8 @@
             bottom: 55px;
             left: -75px;
         }
-        h2 {
+        h1 {
             width: 60%;
-            font-size: 12rem;
-            
         }
         &-title {
             position: relative;
@@ -35,6 +33,11 @@
 
 
     // ABOUT 
+    .about {
+        p {
+            width: 70%;
+        }
+    }
     // END OF ABOUT
 
 
@@ -55,7 +58,6 @@
             
             // first article image
             &.first {
-                
                 top: -50px;
                 
                 img {
@@ -67,7 +69,6 @@
             }
             // second article image
             &.second {
-                
                 bottom: -50px;
 
                 img {

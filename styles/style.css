@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:400,500,700&display=swap");
 html {
   line-height: 1.15;
@@ -296,20 +297,27 @@ button {
   text-transform: uppercase;
 }
 
-.hero h2 {
-  font-size: 8rem;
-  position: relative;
-  bottom: -50px;
+h1 {
+  font-family: "Lora", serif;
+  font-size: 12rem;
 }
 
-.logo {
-  font-family: "Lora", serif;
-  font-weight: 600;
-  letter-spacing: 1px;
+.hero h1 {
+  font-size: calc(8rem + 0.5vw);
+  position: relative;
+  bottom: -65px;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
 }
 
 section {
-  padding: 100px 0;
+  padding: 120px 0;
 }
 
 .wrapper {
@@ -319,7 +327,7 @@ section {
 }
 
 .copy {
-  margin: 30px 0;
+  margin: 20px 0;
   line-height: 1.6;
 }
 
@@ -330,9 +338,35 @@ section {
   letter-spacing: 1px;
 }
 
-.blue-button:hover, .blue-button:focus, .blue-button:active {
+.blue-button:hover, .blue-button:focus {
   background-color: #285E64;
   color: white;
+}
+
+.form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.form .name,
+.form .email,
+.form .message {
+  padding: 30px 20px;
+  border: 1px solid transparent;
+  font-style: italic;
+}
+
+.form .message,
+.form .submit {
+  grid-column: span 2;
+}
+
+.form .message {
+  resize: none;
+  min-height: 300px;
 }
 
 .header {
@@ -347,6 +381,10 @@ section {
           transform: translate(-50%);
   left: 50%;
   top: 1rem;
+  font-family: "Lora", serif;
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .header .nav {
@@ -389,7 +427,7 @@ section {
 }
 
 .header .nav li:nth-child(3) {
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 .header .nav-link {
@@ -397,7 +435,7 @@ section {
   font-weight: 700;
 }
 
-.header .nav-link:hover, .header .nav-link:focus, .header .nav-link:active {
+.header .nav-link:hover, .header .nav-link:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -437,9 +475,8 @@ footer {
   left: -75px;
 }
 
-.index-hero h2 {
+.index-hero h1 {
   width: 60%;
-  font-size: 12rem;
 }
 
 .index-hero-title {
@@ -452,6 +489,10 @@ footer {
   bottom: -40px;
   -webkit-box-shadow: 25px 25px 0 0 white;
           box-shadow: 25px 25px 0 0 white;
+}
+
+.index .about p {
+  width: 70%;
 }
 
 .index .articles {
@@ -547,7 +588,7 @@ footer {
   font-weight: 700;
 }
 
-.index .main-nav-link:hover, .index .main-nav-link:focus, .index .main-nav-link:active {
+.index .main-nav-link:hover, .index .main-nav-link:focus {
   text-decoration: underline;
 }
 
@@ -630,6 +671,125 @@ footer {
   padding-top: 25%;
 }
 
+.blog .main-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  padding: 100px 0;
+  grid-gap: 40px;
+}
+
+.blog .aside {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.blog .aside .about,
+.blog .aside .recent {
+  background-color: white;
+  padding: 40px;
+}
+
+.blog .aside .about {
+  margin-bottom: 20px;
+}
+
+.blog .aside .about h3 {
+  margin: 20px 0;
+}
+
+.blog .aside .about a {
+  display: inline-block;
+  text-transform: none;
+  color: #285E64;
+  font-weight: 600;
+}
+
+.blog .aside .recent h3 {
+  margin-bottom: 20px;
+}
+
+.blog .aside .recent li {
+  position: relative;
+  padding-left: 15px;
+  margin: 10px 0;
+}
+
+.blog .aside .recent li:before {
+  content: "•";
+  color: #F6A823;
+  position: absolute;
+  left: 0;
+}
+
+.blog .aside .recent a {
+  font-size: inherit;
+  text-transform: none;
+}
+
+.blog .aside .recent a:hover, .blog .aside .recent a:focus {
+  font-weight: 600;
+}
+
+.blog-section {
+  padding: 0;
+}
+
+.blog-article, .blog-comment {
+  background-color: white;
+}
+
+.blog-article {
+  padding: 40px;
+  border-bottom: 5px solid #F6A823;
+}
+
+.blog-article-info {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.blog-article span {
+  color: #285E64;
+  font-weight: 600;
+}
+
+.blog-comments {
+  margin: 40px 0;
+}
+
+.blog-comment {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 1fr;
+      grid-template-columns: 200px 1fr;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
+.blog-comment-image {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.blog-comment img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.blog-comment-info {
+  font-style: italic;
+  font-weight: 600;
+  color: #285E64;
+}
+
+.blog-comment:last-of-type {
+  border-bottom: 5px solid #F6A823;
+}
+
 .contact .hero {
   height: 0;
   padding-top: 25%;
@@ -639,16 +799,23 @@ footer {
   background-size: cover;
 }
 
-.contact .grid-parent {
+.contact .main-content {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
+  padding: 100px 0;
+  grid-gap: 40px;
 }
 
 .contact .aside {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
   background-color: white;
   font-style: normal;
+  line-height: 1.5;
+  padding: 40px;
 }
 
 .contact .aside .social {
@@ -669,4 +836,19 @@ footer {
   -webkit-box-align: initial;
       -ms-flex-align: initial;
           align-items: initial;
+}
+
+.contact .aside .social a {
+  font-size: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 2rem;
+}
+
+.contact .aside .email {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.contact .form-section {
+  padding: 0;
 }

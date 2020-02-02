@@ -8,8 +8,113 @@
     // END OF HERO
 
     // BLOG - MAIN CONTENT
-    
+    .main-content {
+        @include main-content;
+    }
 
+    // ASIDE
+    .aside {
+        align-self: start;
+
+        .about,
+        .recent {
+            background-color: white;
+            padding: 40px;
+        }
+        .about {
+            margin-bottom: 20px;
+
+            h3 {
+                margin: 20px 0;
+            }
+
+            a {
+                display: inline-block;
+                text-transform: none;
+                color: $accent-dark;
+                font-weight: 600;
+            }
+        }
+        .recent {
+            
+            h3 {
+                margin-bottom: 20px;
+            }
+
+            li {
+                position: relative;
+                padding-left: 15px;
+                margin: 10px 0;
+            }
+            // bullet points
+            li:before {
+                content: "•";
+                color: $primary;
+                position: absolute; 
+                left: 0;
+            }
+            a {
+                font-size: inherit;
+                text-transform: none;
+
+                @include hover-state {
+                    font-weight: 600;
+                }
+            }
+        }
+
+
+    }
+    // END OF ASIDE
+
+    // BLOG SECTION
+    &-section {
+        padding: 0;
+    }
+    &-article,
+    &-comment  {
+        background-color: white;
+    }
+
+    &-article {
+        padding: 40px;
+        border-bottom: 5px solid $primary;
+
+        &-info {
+            margin-top: 20px;
+            font-style: italic;
+        }
+        span {
+            color: $accent-dark;
+            font-weight: 600;
+        }
+    }
+    &-comments {
+        margin: 40px 0;
+    }
+    &-comment {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        padding: 40px;
+        margin-bottom: 20px;
+
+        &-image {
+            align-self: start;
+        }
+        img {
+            object-fit: contain;
+        }
+
+        &-info {
+            font-style: italic;
+            font-weight: 600;
+            color: $accent-dark;
+        }
+        &:last-of-type {
+            border-bottom: 5px solid $primary;
+        }
+    }
+    
 
 
 

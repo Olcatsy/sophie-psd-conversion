@@ -20,7 +20,8 @@
 
         <!-- Logo -->
         <div class="logo">
-            <h1>Sophie</h1>
+            <!-- clicking on the logo takes you to the main page -->
+            <a href="index.html">Sophie</a>
         </div>
 
         <!-- Header Nav -->
@@ -53,10 +54,10 @@
             <div class="wrapper flex-parent">
 
                 <div class="index-hero-title">
+
                     <!-- I've added the span for accessibility reasons, since the circle image contains text -->
-                    
-                    <img src="assets/circle-text.png" alt="" class="circle-text" aria-hidden="">
-                    <h2 class="logo"><span class="sr-only">It's all about</span>Sophie</h2>
+                    <img src="assets/circle-text.png" alt="" class="circle-text" aria-hidden>
+                    <h1><span class="sr-only">It's all about</span>Sophie</h1>
                 </div>
                 
 
@@ -90,6 +91,9 @@
         <!-- ARTICLES -->
         <section class="articles">
             <div class="wrapper">
+
+                <!-- I'm making sr-only titles for the sections that don't have titles in the design, so that a screen user can know which section they are in -->
+                <h2 class="sr-only">Articles</h2>
 
                 <!-- Article #1 -->
                 <article class="article first">
@@ -147,6 +151,8 @@
         <section class="main-nav">
             <div class="wrapper">
 
+                <h2 class="sr-only">Navigation</h2>
+
                 <ul>
                     <li class="main-nav-item">
                         <a href="#gallery" class="main-nav-link">
@@ -184,6 +190,7 @@
                     </li>
 
                 </ul>
+
             </div>
         </section>
         <!-- END OF FACTS -->
