@@ -28,6 +28,17 @@
             @include box-shadow(white);
         }
     }
+
+    // HERO Media Queries
+    @include max-width($tablet-large) {
+        
+    }
+    @include max-width($tablet-small) {
+
+    }
+    @include max-width($mobile) {
+
+    }
     // END OF HERO
 
 
@@ -37,6 +48,17 @@
         p {
             width: 70%;
         }
+    }
+
+    // ABOUT Media Queries
+    @include max-width($tablet-large) {
+        
+    }
+    @include max-width($tablet-small) {
+
+    }
+    @include max-width($mobile) {
+
     }
     // END OF ABOUT
 
@@ -87,14 +109,35 @@
             }
         }
     }
+
+    // ARTICLES Media Queries
+    @include max-width($tablet-large) {
+        
+    }
+    @include max-width($tablet-small) {
+
+    }
+    @include max-width($mobile) {
+
+    }
     // END OF ARTICLES
 
 
 
     // BANNER
     .banner {
-        @include banner-styles("../assets/home-image-4.jpg");
-        @include banner-height(500, 1600);
+        @include banner-styles("../assets/home-image-4.jpg", 500, 1600);
+    }
+
+    // BANNER Media Queries
+    @include max-width($tablet-large) {
+        
+    }
+    @include max-width($tablet-small) {
+
+    }
+    @include max-width($mobile) {
+
     }
     // END OF BANNER
 
@@ -130,6 +173,17 @@
             }
         }
     }
+
+    // MAIN NAV Media Queries
+    @include max-width($tablet-large) {
+        
+    }
+    @include max-width($tablet-small) {
+
+    }
+    @include max-width($mobile) {
+
+    }
     // END OF MAIN NAV
 
 
@@ -157,6 +211,17 @@
             margin-left: 50px;
         }
     }
+
+    // JOURNEY Media Queries
+    @include max-width($tablet-large) {
+        
+    }
+    @include max-width($tablet-small) {
+
+    }
+    @include max-width($mobile) {
+
+    }
     // END OF JOURNEY
 
 
@@ -171,7 +236,7 @@
 
         img {
             margin-right: 2%;
-            width: calc((100% -4%) / 3);
+            width: calc((100% - 4%) / 3);
             transition: $transition;
 
             &:last-child {
@@ -183,6 +248,17 @@
             }
         }
         
+    }
+
+    // GALLERY Media Queries
+    @include max-width($tablet-large) {
+        
+    }
+    @include max-width($tablet-small) {
+
+    }
+    @include max-width($mobile) {
+
     }
     // END OF GALLERY
 }

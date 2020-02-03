@@ -2,15 +2,10 @@
 
     // HERO
     .hero {
-        @include banner-styles("../assets/blog-image-1.jpg");
-        @include banner-height(400, 1600);
+        @include banner-styles("../assets/blog-image-1.jpg", 400, 1600);
     }
     // END OF HERO
 
-    // BLOG - MAIN CONTENT
-    .main-content {
-        @include main-content;
-    }
 
     // ASIDE
     .aside {
@@ -19,7 +14,6 @@
         .about,
         .recent {
             background-color: white;
-            padding: 40px;
         }
         .about {
             margin-bottom: 20px;
@@ -62,10 +56,9 @@
                 }
             }
         }
-
-
     }
     // END OF ASIDE
+
 
     // BLOG SECTION
     &-section {
@@ -77,7 +70,6 @@
     }
 
     &-article {
-        padding: 40px;
         border-bottom: 5px solid $primary;
 
         &-info {
@@ -95,7 +87,6 @@
     &-comment {
         display: grid;
         grid-template-columns: 200px 1fr;
-        padding: 40px;
         margin-bottom: 20px;
 
         &-image {
@@ -114,8 +105,33 @@
             border-bottom: 5px solid $primary;
         }
     }
+
+    // BLOG SECTION Media Queries
+    @include max-width($tablet-large) {
+
+        
+    }
+    @include max-width($tablet-small) {
+        .aside {
+            display: none;
+        }
+        .blog {
+            &-comment {
+                display: block;
+
+                &-image {
+                    float: left;
+                    width: 30%;
+                    margin-right: 20px;
+                }
+            }
+        }
+        
+    }
+    @include max-width($mobile) {
+        
+    }
+    // End of BLOG SECTION
+    // END OF MAIN CONTENT
     
-
-
-
 }

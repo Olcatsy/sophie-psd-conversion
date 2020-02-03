@@ -4,7 +4,7 @@ html {
 }
 body {
     font-family: $sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     position: relative;
     background-color: $white;
     color: $black;
@@ -60,7 +60,7 @@ h1 {
 }
 // titles for Contact and Blog pages
 .hero h1 {
-    font-size: calc(8rem + 0.5vw);
+    font-size: 8rem;
     position: relative;
     bottom: -65px;
 }
@@ -75,17 +75,20 @@ h3 {
 
 // SHARED STYLES
 section {
-    padding: 120px 0;
+    padding: $section-padding 0;
 }
+
 .wrapper {
     width: 80%;
     max-width: 2000px;
     margin: 0 auto;
 }
+
 .copy {
     margin: 20px 0;
     line-height: 1.6;
 }
+
 .blue-button {
     background-color: $accent;
     padding: 10px 20px;
@@ -97,6 +100,20 @@ section {
         color: white;
     }
 }
+
+// blocks of content on Contact and Blog pages
+.block {
+    padding: 40px;
+}
+
+// styles for the main content on blog and content page
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: $section-padding 0;
+    grid-gap: 40px;
+}
+
 // form styles for Contact and Blog page
 .form {
     display: grid;
@@ -117,7 +134,57 @@ section {
     .message {
         resize: none;
         min-height: 300px;
+    }    
+}
+// END OF SHARED STYLES
+
+
+// SHARED STYLES Media Queries
+@include max-width($tablet-large) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .block {
+        padding: 20px;
+    }
+
+    .form {
+        .name, 
+        .email {
+            grid-column: span 2;
+        }
     }
 }
+@include max-width($tablet-small) {
+    .hero h1 {
+        text-align: center;
+        font-size: 6rem;
+        bottom: 0;
+    }
 
-// End of SHARED STYLES
+    .wrapper {
+        width: calc(100% - 80px);
+    }
+
+    .main-content {
+        padding: 50px 0;
+        grid-template-columns: 1fr;
+    }
+    .form {
+        .name,
+        .email,
+        .message {
+            padding: 20px;
+        }
+    }
+}
+@include max-width($mobile) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+    .wrapper {
+        // leaves 20px on each side
+        width: calc(100% - 40px);
+    }
+}

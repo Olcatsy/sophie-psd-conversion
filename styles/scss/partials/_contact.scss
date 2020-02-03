@@ -2,16 +2,9 @@
 
     // HERO
     .hero {
-        @include banner-height(400, 1600);
-        @include banner-styles("../assets/contact-image-1.jpg")
+        @include banner-styles("../assets/contact-image-1.jpg", 400, 1600)
     }
     // END OF HERO
-
-
-    // MAIN CONTENT
-    .main-content {
-        @include main-content();
-    }
 
 
     // ASIDE
@@ -20,27 +13,28 @@
         background-color: white;
         font-style: normal;
         line-height: 1.5;
-        padding: 40px;
 
         .social {
-            color: $primary;
-
-            &.flex-parent {
-                @include flex();
-            }
+            color: $primary; 
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
 
             a {
                 font-size: 3rem;
-                padding-right: 3rem;
-                padding-bottom: 2rem;
+                padding: 10px;
+
+                @include hover-state {
+                    color: $secondary;
+                    scale: 1.2;
+                }
             }
         }
+
         .email {
-                margin-bottom: 20px;
+                margin: 20px 0;
                 font-weight: 600;
             }
     }
-
     // END OF ASIDE
 
 
@@ -51,6 +45,36 @@
     // END OF CONTACT FORM
 
 
+    // CONTACT Media Queries
+    @include max-width($tablet-large) {
+        .aside {
+            padding: 20px;
+        }
+    }
+    @include max-width($tablet-small) {
+        .aside {
+            display: flex;
+            justify-content: space-around;
 
-
+            .social {
+                display: grid;
+                justify-content: center;
+                justify-items: center;
+                align-items: center;
+                grid-gap: 3rem;
+                width: 50%;
+                font-size: 4rem;
+            }
+        }
+    }
+    @include max-width($mobile) {
+        .aside {
+            flex-direction: column;
+            align-items: center;
+            text-align: center; 
+        }
+    }
 }
+
+
+    

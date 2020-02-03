@@ -20,8 +20,10 @@ $mobile: 480px;
 $tablet-small: 768px;
 $tablet-large: 980px;
 
+// MISC
 $transition: all 0.3s ease;
 $box-shadow-size: 25px;
+$section-padding: 120px;
 
 
 
@@ -55,24 +57,16 @@ $box-shadow-size: 25px;
     box-shadow: $box-shadow-size $box-shadow-size 0 0 $color;
 }
 
-// full width banner. Makes the div height fit the height of the image - found this trick on Stack Overflow
-@mixin banner-height ($img-height, $img-width) {
-    height: 0;  
-    padding-top: percentage($img-height / $img-width);
-}
-
-// Styles for background and title of the banners
-@mixin banner-styles ($url) {
-    background-image: url($url);
+// Styles for a full width banner. Makes the div height fit the height of the image - found this trick on Stack Overflow
+@mixin banner-styles ($url, $bg-height, $bg-width) {
+    background: url($url);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-}
+    height: 0;  
+    padding-top: percentage($bg-height / $bg-width);
 
-// styles for the main content on blog and content page
-@mixin main-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding: 100px 0;
-    grid-gap: 40px;
+    @include max-width ($tablet-small) {
+        background: $primary;
+    }
 }
