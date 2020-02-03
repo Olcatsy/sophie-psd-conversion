@@ -15,6 +15,16 @@
         letter-spacing: 1px;
     }
 
+    .hamburger {
+        background: $accent;
+        color: $black;
+        padding: 10px 13px;
+        font-size: 4rem;
+        position: absolute;
+        right: 0;
+        display: none;
+    }
+
     .nav  {
         @include flex(default, center, center);
         width: 100%;
@@ -41,9 +51,14 @@
             @include hover-state {
                 transform: scale(1.1);
             }
+        }  
+        .close-button {
+            display: none;
+            background: transparent;
+            font-size: 4rem;
+            color: $white;
+            margin-top: 40px;
         }
-            
-
     }
 }
 
@@ -70,5 +85,36 @@
     
 }
 @include max-width($mobile) {
+    .header {
+        .hamburger {
+            display: block
+        }
+        .nav {
+            height: 100vh;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: $primary;
+            color: $black;
+            display: none;
+            
+            ul {
+               flex-direction: column;
+               margin-top: 40px; 
+               height: 100%;
+            }
 
+            &-link {
+                font-size: 3rem;
+                padding: 15px 0;
+            }
+
+            .close-button {
+                display: block;
+                
+            }
+        }
+    }
 }

@@ -271,6 +271,7 @@
             
             @include hover-state {
                 background-color: $primary;
+                text-decoration: none;
             }
         }
 
