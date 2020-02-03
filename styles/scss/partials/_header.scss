@@ -49,10 +49,25 @@
 
 // MEDIA QUERIES
 @include max-width($tablet-large) {
+    .header {
+        .logo {
+            display: none;
+        }
 
+        .nav {
+            & li:nth-child(2),
+            & li:nth-child(3) {
+                margin: 0;
+            }
+
+            &-link {
+                font-size: 2rem;
+            }
+        }
+    }
 }
 @include max-width($tablet-small) {
-
+    
 }
 @include max-width($mobile) {
 

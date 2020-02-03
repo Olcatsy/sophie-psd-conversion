@@ -54,19 +54,23 @@ a,
 button {
     text-transform: uppercase;
 }
+
 h1 {
     font-family: $serif;
     font-size: 12rem;
 }
+
 // titles for Contact and Blog pages
 .hero h1 {
     font-size: 8rem;
     position: relative;
     bottom: -65px;
 }
+
 h2 {
     font-size: 4rem;
 }
+
 h3 {
     font-size: 3rem;
 }
@@ -127,10 +131,12 @@ section {
         border: 1px solid transparent;
         font-style: italic;
     }
+
     .message,
     .submit {
         grid-column: span 2;
     }
+
     .message {
         resize: none;
         min-height: 300px;
@@ -141,6 +147,9 @@ section {
 
 // SHARED STYLES Media Queries
 @include max-width($tablet-large) {
+    h1 {
+        font-size: 9rem;
+    }
     .wrapper {
         width: 90%;
     }
@@ -157,12 +166,15 @@ section {
     }
 }
 @include max-width($tablet-small) {
+    
     .hero h1 {
         text-align: center;
         font-size: 6rem;
         bottom: 0;
     }
-
+    section {
+        padding: 50px 0;
+    }
     .wrapper {
         width: calc(100% - 80px);
     }
@@ -171,6 +183,7 @@ section {
         padding: 50px 0;
         grid-template-columns: 1fr;
     }
+
     .form {
         .name,
         .email,
@@ -180,9 +193,13 @@ section {
     }
 }
 @include max-width($mobile) {
+    h1 {
+            font-size: 6rem;
+        }
     .hero h1 {
         font-size: 4rem;
     }
+
     .wrapper {
         // leaves 20px on each side
         width: calc(100% - 40px);
