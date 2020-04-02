@@ -8,7 +8,6 @@
         .grid-parent {
             display: grid;
             grid-template-columns: 60% 40%;
-            // @include flex(default, space-around, center);
         }
         
         .circle-text {
@@ -107,24 +106,31 @@
         position: relative;
         
         img {
-                object-fit: cover;
+            object-fit: cover;
         }
         
         // first article image
         &.first {
             top: -50px;
             align-self: start;
-            box-shadow: 
-                $box-shadow-size $box-shadow-size 0 0 $secondary, 
-                -200px $box-shadow-size 0 0 $secondary;
+            
+            img {
+                box-shadow: 
+                    $box-shadow-size $box-shadow-size 0 0 $secondary, 
+                    -200px $box-shadow-size 0 0 $secondary;
+            }
         }
 
         // second article image
         &.second {
             bottom: -25px;
-            align-self: end;box-shadow: 
+            align-self: end;
+            
+            img {
+                box-shadow: 
                 $box-shadow-size $box-shadow-size 0 0 $primary,
                 200px $box-shadow-size 0 0 $primary;
+            }
         }
     }
 
@@ -267,7 +273,9 @@
 
         &-link {
             font-size: 2rem;
-            padding: 10px 50px;
+            padding: 15px 50px;
+            width: 100%;
+            text-align: center;
             
             @include hover-state {
                 background-color: $primary;

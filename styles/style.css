@@ -683,6 +683,9 @@ footer {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
+}
+
+.article-img.first img {
   -webkit-box-shadow: 25px 25px 0 0 #A82706, -200px 25px 0 0 #A82706;
           box-shadow: 25px 25px 0 0 #A82706, -200px 25px 0 0 #A82706;
 }
@@ -692,6 +695,9 @@ footer {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+}
+
+.article-img.second img {
   -webkit-box-shadow: 25px 25px 0 0 #F6A823, 200px 25px 0 0 #F6A823;
           box-shadow: 25px 25px 0 0 #F6A823, 200px 25px 0 0 #F6A823;
 }
@@ -824,7 +830,9 @@ footer {
   }
   .main-nav-link {
     font-size: 2rem;
-    padding: 10px 50px;
+    padding: 15px 50px;
+    width: 100%;
+    text-align: center;
   }
   .main-nav-link:hover, .main-nav-link:focus {
     background-color: #F6A823;
