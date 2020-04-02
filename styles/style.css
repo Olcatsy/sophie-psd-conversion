@@ -276,7 +276,6 @@ a {
 
 img {
   max-width: 100%;
-  height: 100%;
   display: block;
 }
 
@@ -370,6 +369,12 @@ section {
   padding: 30px 20px;
   border: 1px solid transparent;
   font-style: italic;
+}
+
+.form .name:focus,
+.form .email:focus,
+.form .message:focus {
+  border-bottom: 2px solid #F6A823;
 }
 
 .form .message,
@@ -478,6 +483,7 @@ section {
           align-items: center;
   width: 100%;
   padding-top: 15px;
+  z-index: 10;
 }
 
 .header .nav ul {
@@ -592,6 +598,7 @@ footer {
   position: absolute;
   bottom: 55px;
   left: -75px;
+  height: 100%;
 }
 
 .index-hero-title {
@@ -623,14 +630,15 @@ footer {
     left: -50px;
   }
   .index-hero .grid-parent {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   .index-hero-image {
     -webkit-box-shadow: 15px 25px 0 0 white;
             box-shadow: 15px 25px 0 0 white;
     -ms-grid-column: 1;
     grid-column: 1;
+    height: 100%;
   }
 }
 
@@ -730,7 +738,7 @@ footer {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  .article-img.first {
+  .article-img.first img {
     -webkit-box-shadow: -25px 25px 0 0 #A82706, -200px 25px 0 0 #A82706;
             box-shadow: -25px 25px 0 0 #A82706, -200px 25px 0 0 #A82706;
   }
@@ -1002,11 +1010,19 @@ footer {
   margin: 20px 0;
 }
 
+.blog .aside .about p {
+  width: 100%;
+}
+
 .blog .aside .about a {
   display: inline-block;
   text-transform: none;
   color: #285E64;
   font-weight: 600;
+}
+
+.blog .aside .about a:hover, .blog .aside .about a:focus {
+  color: #05AFC1;
 }
 
 .blog .aside .recent h3 {
@@ -1047,9 +1063,14 @@ footer {
   border-bottom: 5px solid #F6A823;
 }
 
+.blog-article h2 {
+  text-align: center;
+}
+
 .blog-article-info {
   margin-top: 20px;
   font-style: italic;
+  text-align: center;
 }
 
 .blog-article span {
@@ -1090,10 +1111,7 @@ footer {
   border-bottom: 5px solid #F6A823;
 }
 
-@media (max-width: 768px) {
-  .blog .aside {
-    display: none;
-  }
+@media (max-width: 980px) {
   .blog .blog-comment {
     display: block;
   }
@@ -1101,6 +1119,15 @@ footer {
     float: left;
     width: 30%;
     margin-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog .aside {
+    display: none;
+  }
+  .blog .blog-article h2 {
+    font-size: 3rem;
   }
 }
 

@@ -14,7 +14,7 @@
             position: absolute;
             bottom: 55px;
             left: -75px;
-            // height: auto;
+            height: 100%;
         }
         &-title {
             position: relative;
@@ -43,11 +43,12 @@
                 left: -50px;
             }
             .grid-parent {
-                grid-template-columns: 100%;
+                grid-template-columns: 1fr;
             }
             &-image {
                 box-shadow: 15px $box-shadow-size 0 0 white;
                 grid-column: 1;
+                height: 100%;
             }
         }
     }
@@ -173,7 +174,7 @@
         grid-template-columns: 1fr;
 
         &-img {
-            &.first {
+            &.first img {
                 box-shadow: 
                     -$box-shadow-size $box-shadow-size 0 0 $secondary, 
                     -200px $box-shadow-size 0 0 $secondary;

@@ -22,12 +22,22 @@
                 margin: 20px 0;
             }
 
+            // needs to be overriden, because there's .about p in index.html
+            p {
+                width: 100%;
+            }
+
             a {
                 display: inline-block;
                 text-transform: none;
                 color: $accent-dark;
                 font-weight: 600;
+
+                @include hover-state {
+                    color: $accent;
+                }
             }
+
         }
         .recent {
             
@@ -72,10 +82,16 @@
     &-article {
         border-bottom: 5px solid $primary;
 
+        h2 {
+            text-align: center;
+        }
+
         &-info {
             margin-top: 20px;
             font-style: italic;
+            text-align: center;
         }
+
         span {
             color: $accent-dark;
             font-weight: 600;
@@ -106,32 +122,36 @@
         }
     }
 
+
+
     // BLOG SECTION Media Queries
     @include max-width($tablet-large) {
+        .blog-comment {
+            display: block;
 
-        
+            &-image {
+                float: left;
+                width: 30%;
+                margin-right: 20px;
+            }
+        }
     }
+
     @include max-width($tablet-small) {
         .aside {
             display: none;
         }
         .blog {
-            &-comment {
-                display: block;
-
-                &-image {
-                    float: left;
-                    width: 30%;
-                    margin-right: 20px;
-                }
+            &-article h2 {
+                font-size: 3rem;
             }
         }
-        
     }
+
     @include max-width($mobile) {
-        
     }
+
     // End of BLOG SECTION
-    // END OF MAIN CONTENT
     
+    // END OF MAIN CONTENT
 }
